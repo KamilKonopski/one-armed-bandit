@@ -9,20 +9,20 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1>One-armed bandit</h1>
+			<h1 class="heading">One-armed bandit</h1>
 			<section class="game">
 				<div class="game__item"></div>
 				<div class="game__item"></div>
 				<div class="game__item"></div>
-				<button>spin!</button>
 			</section>
+			<button id="spin-btn">spin!</button>
 			<section class="stats">
 				<span class="stats__result">You lost $2</span>
-				<span class="stats__games">0</span>
-				<span class="stats__wins">0</span>
-				<span class="stats__losses">0</span>
+				<span class="stats__games">Your games: 0</span>
+				<span class="stats__wins">Your wins: 0</span>
+				<span class="stats__losses">Your losses: 0</span>
 			</section>
-			<button>Rules</button>
+			<button id="rules-btn">Rules</button>
 		</div>
 		<script type="module" src="js/main.js"></script>
 	</body>
