@@ -124,3 +124,64 @@ html {
     width: 93%;
     height: 95%;
 }
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 1px solid #000;
+    border-radius: 10px;
+    z-index: 10;
+    background: #fff;
+    width: 500px;
+    max-width: 80%;
+    transition: 200ms ease-in-out;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal__header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+.modal__title {
+    font-size: 25px;
+    font-weight: bold;
+    flex-basis: 53%;
+    text-transform: uppercase;
+}
+
+#close-btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.modal__content {
+    padding: 10px 15px;
+}
+
+.overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
