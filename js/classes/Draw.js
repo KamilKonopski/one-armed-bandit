@@ -9,7 +9,7 @@ export default class Draw {
 		const draw_colors = [];
 
 		for (let i = 0; i < this.color_options.length; i++) {
-			const index = Math.floor(Math.random() + this.color_options.length);
+			const index = Math.floor(Math.random() * this.color_options.length);
 			const draw_color = this.color_options[index];
 			draw_colors.push(draw_color);
 		}
