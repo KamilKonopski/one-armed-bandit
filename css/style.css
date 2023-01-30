@@ -33,7 +33,6 @@ html {
 .game__item {
     flex-basis: 30%;
     height: 30vh;
-    background-color: #ddd;
 }
 
 .bid {
@@ -46,7 +45,6 @@ html {
     margin-bottom: 45px;
     font-size: 18px;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 #spin-btn {
