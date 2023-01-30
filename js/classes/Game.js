@@ -18,5 +18,32 @@ export default class Game {
 		this.allGames = document.querySelector(".stats__games");
 		this.winGames = document.querySelector(".stats__wins");
 		this.lossGames = document.querySelector(".stats__losses");
+
+		this.render();
+	}
+
+	render(
+		colors = ["#05D1F8", "#F805CB", "#05D1F8"],
+		money = this.wallet.getWalletMoney(),
+		result = "",
+		stats = [0, 0, 0],
+		bid = 0,
+		wonMoney = 0
+	) {
+		this.gameItem.forEach((item, index) => {
+			item.style.backgroundColor = colors[index];
+		});
+
+		this.moneyWallet.textContent = `Wallet: ${money}`;
+
+		if (result) {
+			result = `You won $${wonMoney}`;
+		} else if (!result && result !== "") {
+			result = `You lost $${bid}`;
+		}
+		this.gameResult.textContent = result;
+		this.allGames.textContent = `Your games: ${stats[0]}`;
+		this.winGames.textContent = `Your wins: ${stats[1]}`;
+		this.lossGames.textContent = `Your losses: ${stats[2]}`;
 	}
 }
