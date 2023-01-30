@@ -1,6 +1,6 @@
 import Game from "./classes/Game.js";
 
-const game = new Game();
+const game = new Game(200);
 
 //modal
 const openModalButton = document.getElementById("rules-btn");
